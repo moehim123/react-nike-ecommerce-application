@@ -59,10 +59,10 @@ To get a local copy of the project up and running, follow these steps.
    ```bash
    npm start
 
-Open your browser and go to http://localhost:3000 to see the application running.
+- **Open your browser and go to http://localhost:3000 to see the application running.
 
 
-##Usage
+###Usage
 
 Browse Products: Navigate through the available products using the sidebar or the main product listing page.
 Filter Products: Use the sidebar to filter products by category and price.
