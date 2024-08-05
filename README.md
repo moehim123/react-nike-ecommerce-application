@@ -46,18 +46,18 @@ To get a local copy of the project up and running, follow these steps.
 
 2. **Navigate to the project directory:
 
-```bash
-cd nike-ecommerce
+   ```bash
+   cd nike-ecommerce
 
 3. **Install the dependencies:
 
-```bash
-npm install
+   ```bash
+   npm install
 
 4.***Run the application:
 
-```bash
-npm start
+   ```bash
+   npm start
 
 Open your browser and go to http://localhost:3000 to see the application running.
 
