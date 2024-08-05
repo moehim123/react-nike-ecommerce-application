@@ -1,4 +1,5 @@
-import React, {useContext, useState} from 'react';
+
+import React, {useContext, useState, useEffect} from 'react';
 import { ChakraProvider, Box, Flex, Heading } from '@chakra-ui/react'; 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import Sidebar from './components/Sidebar';  
@@ -47,11 +48,11 @@ function App() {
       } 
       else{  
          return [...prevIsInWishList, ProductsData];  
-      } 
+        }
     });   
   
   };    
-
+ 
   const updateCartCount = (shoesName, cartProductCount) => { 
     setIsInCart((prevIsInCart) => { 
       if (cartProductCount == 0 ) {

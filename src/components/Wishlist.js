@@ -1,26 +1,38 @@
-import React, {useState} from "react";  
+import React from 'react';
+import { Box } from '@chakra-ui/react';
+import Card from './Card';
 
-import {Box, Image, Heading, Text, Flex, Button, VStack} from '@chakra-ui/react'; 
+const Wishlist = ({ inWishList, toggleWishList }) => {
+  console.log('Wishlist component props:', inWishList);
 
-import Card from "./Card"; 
+  return (
 
-const Wishlist = ({inWishList, toggleWishList}) => { 
+    <Box
+      flex="1"
+      display="flex"
+      flexWrap="wrap"
+      gap="16px"
+      padding="24px"
+      backgroundColor="#FAFAFA"
+      marginLeft="250px"
+      marginTop="145px"
+    >
+      {inWishList.length === 0 ? (
+        <Box>No items in wishlist</Box>
+      ) : (
+        inWishList.map((wishProduct, index) => (
+          <Card
+            key={index}
+            shoesImage={wishProduct.shoesImage}
+            shoesName={wishProduct.shoesName}
+            shoesPrice={wishProduct.price}
+            isInWishList={true}
+            toggleWishList={() => toggleWishList(wishProduct)}
+          />
+        ))
+      )}
+    </Box>
+  );
+};
 
-    return(
-        <Box flex = "1" display="flex" flexWrap="wrap" gap="16px" padding="24px" backgroundColor = "#FAFAFA" marginLeft = "250px" marginTop = "145px">  
-            {inWishList.map((wishProduct, index) => (
-              <Card 
-                key = {index} 
-                shoesImage = {wishProduct.shoesImage} 
-                shoesName = {wishProduct.shoesName} 
-                shoesPrice = {wishProduct.price} 
-                isInWishList = {inWishList.some((item) => item.shoesName === wishProduct.shoesName)} 
-                toggleWishList = {() => toggleWishList(wishProduct)}  
-              /> 
-            ))}
-        </Box>
-    ) 
-} 
-
-
-export default Wishlist; 
+export default Wishlist;
