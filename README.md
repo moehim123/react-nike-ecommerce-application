@@ -54,7 +54,7 @@ To get a local copy of the project up and running, follow these steps.
    ```bash
    npm install
 
-4.***Run the application:
+4. **Run the application:
 
    ```bash
    npm start
@@ -77,23 +77,27 @@ Context API: For state management across the application.
 State Management
 The Nike E-commerce Application uses React's useState and useContext hooks to manage state across the application. Here are some key areas where state management is implemented:
 
-useState Hook
-Sidebar: Manages the open/close state of the price filter and the selected category.
+1. **useState Hook**:
+   **Sidebar: Manages the open/close state of the price filter and the selected category.**:
+
+   ```bash
+   const [isPriceFilterOpen, setisPriceFilterOpen] = useState(false);
+   const [selectedCategory, setSelectedCategory] = useState(null);
 
 
-const [isPriceFilterOpen, setisPriceFilterOpen] = useState(false);
-const [selectedCategory, setSelectedCategory] = useState(null);
-Cart and Wishlist: Manages the items in the shopping cart and wishlist.
+2. **Cart and Wishlist: Manages the items in the shopping cart and wishlist.**:
+  
 
-const [inWishList, setIsInWishList] = useState([]);
-const [inCart, setIsInCart] = useState([]);
-Search and Category Selection: Manages the search query and category selection for product filtering.
+   ```bash
+   const [inWishList, setIsInWishList] = useState([]);
+   const [inCart, setIsInCart] = useState([]);
 
 
-const [onSearchQuery, setOnSearchQuery] = useState("");
-const [category, setCategory] = useState(null);
-useContext Hook
-Price Context: Provides a global state for managing price filters across different components.
+3. **Search and Category Selection: Manages the search query and category selection for product filtering.**:
+  
 
-const { chosenPrice, setChosenPrice } = useContext(PriceContext);
-Cart and Wishlist Contexts: (Optional, if implemented) Manage shared state for cart and wishlist items across different components.
+   ```bash
+   const [onSearchQuery, setOnSearchQuery] = useState("");
+   const [category, setCategory] = useState(null); 
+
+These right here were a few examples of the states used to give you a clue. 
