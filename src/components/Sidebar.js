@@ -47,22 +47,20 @@ const Sidebar = ({ categorySelected }) => {
     categorySelected(category);
   };
 
-  // Responsive styles
   const sidebarWidth = useBreakpointValue({ base: "100%", md: "250px" });
   const fontSize = useBreakpointValue({ base: "14px", md: "16px" });
 
-  // Disclosure for Drawer
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-      {/* Hamburger Icon for Small Screens */}
       <Box
         display={{ base: "block", md: "none" }}
         position="fixed"
         top="20px"
         left="20px"
         zIndex="1100"
+        marginBottom="40px"
       >
         <IconButton
           aria-label="Open menu"
@@ -73,7 +71,6 @@ const Sidebar = ({ categorySelected }) => {
         />
       </Box>
 
-      {/* Sidebar for Medium and Larger Screens */}
       <Box
         width={sidebarWidth}
         padding="20px"
@@ -159,12 +156,11 @@ const Sidebar = ({ categorySelected }) => {
         )}
       </Box>
 
-      {/* Drawer for Small Screens */}
       <Drawer
         isOpen={isOpen}
         placement="left"
         onClose={onClose}
-        size="full" // Make the drawer full screen
+        size="full"
       >
         <DrawerOverlay />
         <DrawerContent backgroundColor="#171616">

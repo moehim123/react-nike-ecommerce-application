@@ -40,10 +40,10 @@ const Products = ({selectedCategory, chosenPrice, toggleWishList, inWishList, in
             > 
 
                 <Heading 
-                    paddingLeft="4px" 
+                    paddingLeft="24px" 
                     size="lg" 
                     marginBottom="45px" 
-                    marginTop = "45px" 
+                    marginTop = "74px" 
                 >
                     {selectedCategory ? selectedCategory : "All Nike Products"}
                 </Heading> 

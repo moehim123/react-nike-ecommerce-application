@@ -59,6 +59,7 @@ const Card = ({shoesImage, shoesPrice, shoesName, isInWishList, toggleWishList, 
         paddingRight = "14px"  
         flexDirection = "row"  
         position = "relative"  
+        marginLeft = "24px"
         
         
         > 
@@ -91,7 +92,7 @@ const Card = ({shoesImage, shoesPrice, shoesName, isInWishList, toggleWishList, 
                 top = "25px"  
                 right = "25px" 
                 cursor = "pointer" 
-                zIndex = "999" 
+                zIndex = "888" 
                 onClick = {toggleWishList}    
                 /> 
                 </Box> 

@@ -9,7 +9,6 @@ import {
   Image,
   useBreakpointValue,
 } from "@chakra-ui/react";
-
 import { Link } from "react-router-dom";
 
 import cart from "../Images/cart.svg";
@@ -28,8 +27,8 @@ const Header = ({ wishListQuantity, cartProductCount, onSearch }) => {
   return (
     <Box
       width={{ base: "100vw", md: "calc(100vw - 250px)" }} // Adjust width for sidebar
-      padding="20px"
-      marginTop="24px"
+      paddingTop="24px" // Padding at the top to match margin-top
+      padding="54px"
       position="fixed"
       top="0px"
       left={{ base: "0px", md: "250px" }}

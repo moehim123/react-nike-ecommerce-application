@@ -6,7 +6,6 @@ const Wishlist = ({ inWishList, toggleWishList }) => {
   console.log('Wishlist component props:', inWishList);
 
   return (
-
     <Box
       flex="1"
       display="flex"
@@ -14,8 +13,10 @@ const Wishlist = ({ inWishList, toggleWishList }) => {
       gap="16px"
       padding="24px"
       backgroundColor="#FAFAFA"
-      marginLeft="250px"
-      marginTop="145px"
+      marginLeft={{ base: "0px", md: "250px" }}
+      marginTop={{ base: "184px", md: "184px" }}
+      justifyContent={{ base: "center", md: "flex-start" }}  // Center cards on smaller screens
+      alignItems={{ base: "center", md: "flex-start" }}      // Align items in the center on smaller screens
     >
       {inWishList.length === 0 ? (
         <Box>No items in wishlist</Box>
