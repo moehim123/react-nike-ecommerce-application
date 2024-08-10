@@ -1,13 +1,10 @@
 module.exports = {
-    webpack: {
-      configure: (webpackConfig) => {
-        webpackConfig.module.rules.push({
-          test: /\.m?js$/,
-          resolve: {
-            fullySpecified: false,
-          },
-        });
-        return webpackConfig;
-      },
+  webpack: {
+    configure: (webpackConfig) => {
+      webpackConfig.ignoreWarnings = [
+        /Failed to parse source map/, // Example of suppressing warnings
+      ];
+      return webpackConfig;
     },
-  };
+  },
+};
