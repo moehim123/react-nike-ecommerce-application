@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Image, Heading, Text, Flex, Button, VStack, HStack } from "@chakra-ui/react";
 import DeleteIcon from "../Images/Delete-Icon.svg";
 import PlusSign from "../Images/Plus-Sign.svg";
