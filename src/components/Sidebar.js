@@ -37,7 +37,7 @@ const Sidebar = ({ categorySelected }) => {
     "Air Jordan",
   ];
   const pricesOffered = ["$200", "$250", "$350", "$402", "$502"];
-  const [selectedCategory, setSelectedCategory] = useState(null);
+
 
   const handlePriceToggle = () => setisPriceFilterOpen(!isPriceFilterOpen);
   const handleChosenPrice = (price) => () =>
